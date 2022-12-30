@@ -10,7 +10,7 @@ from rest_framework.throttling import UserRateThrottle
 
 class ServiceTodos(viewsets.ModelViewSet):
     queryset = Service.objects.all()
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
 
     serializer_class = ServiceSerializer
     
