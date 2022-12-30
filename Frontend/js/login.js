@@ -47,9 +47,9 @@ async function Login(user){
                     title: 'Oops...',
                     text: "Correo inválido o contraseña incorrecta!"
                 })
-                // window.location.href="login.html"
+                
             }else{
-                window.location.href="index.html"
+                window.location.href="index1.html"
             }
             localStorage.setItem("token.users",JSON.stringify(token));
         } catch (error) {
