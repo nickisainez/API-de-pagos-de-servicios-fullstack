@@ -24,7 +24,7 @@ const {payment_service_logo, payment_service_name, payment_service_expiration, p
 main2.innerHTML += `    
 <div class="col-13">
     <div class="card mb-2" id="inside">
-        <div class="card-body" id="outside" >
+        <div class="card-body" id="outside2" >
             <table class="table2">
                 <tr>
                     <th scope="col"> <img src="${payment_service_logo}"/> <th>

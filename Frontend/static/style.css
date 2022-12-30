@@ -55,3 +55,9 @@ body{
 #inside {
   border-radius: 100%;
 }
+
+#outside2 {
+  padding: 9px;
+  border-radius: 20px;
+  background-color: rgb(230, 171, 171);
+ }
