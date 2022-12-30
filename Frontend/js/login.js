@@ -1,15 +1,15 @@
 let token = JSON.parse(localStorage.getItem("token.users")) ?? [];
 console.log(token)
 
-const inputEmail = document.getElementById("inputEmail");
-const inputPassword = document.getElementById("inputPassword");
-const buttonLogin = document.getElementById("buttonLogin");
-const buttonSignup = document.getElementById("buttonSignup");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const login = document.getElementById("login");
+const register = document.getElementById("register");
 
 
-buttonLogin.onclick = function(){
-    const textEmail = inputEmail.value
-    const textPassword = inputPassword.value
+login.onclick = function(){
+    const textEmail = email.value
+    const textPassword = password.value
     const user = {
         "email": textEmail,
         "password": textPassword
@@ -17,7 +17,7 @@ buttonLogin.onclick = function(){
     Login(user);
 }
 
-buttonSignup.onclick = function(){
+register.onclick = function(){
     window.location.href="register.html"
 }
 
