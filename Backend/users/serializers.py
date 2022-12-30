@@ -29,21 +29,6 @@ class SignUpSerializer(serializers.ModelSerializer):
 
         return user
 
-class UserSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = ["email", "password"]
-
-    def create(self, validated_data):
-        user = User.objects.create(email=validated_data['email'],
-                                       name=validated_data['username']
-                                         )
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
-
-
 class GetUserSerializer(serializers.ModelSerializer):
     email = serializers.CharField(max_length=80)
     username = serializers.CharField(max_length=45)
