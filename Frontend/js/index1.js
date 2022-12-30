@@ -1,4 +1,4 @@
-localStorage.setItem("token", 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyNDM2MjU5LCJpYXQiOjE2NzIzNDk4NTksImp0aSI6ImUxOWVkMTRjODZiZDRkOTRhMzBjYTY3NmQxYThkY2UxIiwidXNlcl9pZCI6Mn0.qyCcw2G1f3LMD9pJGhBYkPb7Xh2joMr0ks0UOHg1X-I');
+const token = JSON.parse(localStorage.getItem("token.users")) ?? [];
 
 const main = document.querySelector(".row");
 const body = document.querySelector("body");
@@ -10,9 +10,9 @@ async function getTask() {
     mode: "cors",
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem("token")}`
+        Authorization: `Bearer ${token[token.length-2].access}`,
       }
-    });
+  });
   const data = await response.json();
   renderTasks(data);
 }

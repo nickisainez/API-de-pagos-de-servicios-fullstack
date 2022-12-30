@@ -8,7 +8,7 @@ const response2 = await fetch('http://127.0.0.1:8000/servicios/expiraciones/', {
     mode: "cors",
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem("token")}`
+        Authorization: `Bearer ${token[token.length-2].access}`,
       }
     });
 

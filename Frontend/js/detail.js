@@ -1,3 +1,5 @@
+const token = JSON.parse(localStorage.getItem("token.users")) ?? [];
+
 const main = document.querySelector(".row");
 const body = document.querySelector("body");
 
@@ -11,7 +13,7 @@ async function getTask() {
       mode: "cors",
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem("token")}`
+          Authorization: `Bearer ${token[token.length-2].access}`,
       }
       });
     const data = await response.json();

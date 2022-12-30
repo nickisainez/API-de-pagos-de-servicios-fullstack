@@ -1,3 +1,5 @@
+const token = JSON.parse(localStorage.getItem("token.users")) ?? [];
+
 async function deleteTodo() {
     const id = new URLSearchParams(window.location.search).get("id");
     Swal.fire({
@@ -16,7 +18,7 @@ async function deleteTodo() {
           mode: "cors",
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${token[token.length-2].access}`,
           }   
         }).then((response) => {
           if (response.ok) {

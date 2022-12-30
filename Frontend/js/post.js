@@ -1,3 +1,5 @@
+const token = JSON.parse(localStorage.getItem("token.users")) ?? [];
+
 const formTodo = document.getElementById('form');
 const name = document.getElementById('name');
 const description = document.getElementById('description');
@@ -35,7 +37,7 @@ async function acceptData(){
         mode: "cors",
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${token[token.length-2].access}`,
       },
         body: JSON.stringify(data)
     }).then((response)=>{
