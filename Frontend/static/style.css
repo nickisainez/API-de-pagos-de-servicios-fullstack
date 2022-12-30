@@ -1,0 +1,57 @@
+p {
+    font-family: monospace;
+    width: 49em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:x-large;
+    font-weight:500;
+}
+
+img { 
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px;
+}
+
+table {
+  table-layout: fixed;
+  width: 30%;
+  border-collapse: collapse;
+}
+
+.fecha{
+  padding-left: 320px;
+}
+
+.monto{
+  padding-left: 720px;
+}
+
+.monto1{
+  padding-left: 500px;
+}
+
+.monto2{
+  padding-left: 620px;
+}
+
+.table2 {
+  table-layout: fixed;
+  width: 40%;
+  border-collapse: collapse;
+}
+
+body{
+  background-color: rgb(230, 229, 229);
+}
+
+#outside {
+ padding: 9px;
+ border-radius: 20px;
+ background-color: white;
+}
+
+#inside {
+  border-radius: 100%;
+}
