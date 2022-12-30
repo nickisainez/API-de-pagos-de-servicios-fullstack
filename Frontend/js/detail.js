@@ -1,9 +1,9 @@
 const token = JSON.parse(localStorage.getItem("token.users")) ?? [];
 
 const main = document.querySelector(".row");
-const body = document.querySelector("body");
+const body = document.querySelector(".body");
 
-async function getTask() {
+async function getTask3() {
   const id = new URLSearchParams(window.location.search).get("id");
   const extra = id ? `${id}/` : "";
 
@@ -42,9 +42,9 @@ function renderTasks(data) {
           </p>
           <img src="${logo}" width="310" height="163"/>
 
-          <br><br>
+          <div class="mt-2">
           <a href="./detail.html?id=${id}" class="btn btn-primary">Revisar</a>
-          
+          </div>
         </div>
       </div>
     </div>`;
@@ -57,15 +57,16 @@ function renderTodo(data) {
   <div class="col-lg-8 mx-auto p-4 py-md-5">
     <main>
       <h1>Detalle</h1>
+      
       <p class="fs-5 col-md-8">
         Servicio: ${name}
       </p>
       <p class="fs-5 col-md-8" align="justify">
-        Descripción: <br> ${bodyTodo} 
+        Descripción: <div class="mt-1"> ${bodyTodo} 
       </p>
       <img src="${logo}" width="310" height="163"/>
     
-      
+      <div class="mt-2">
       <div class="mb-5">
         <a href="/" class="btn btn-primary">Regresar</a>
         <a href="./edit.html?id=${id}" class="btn btn-primary">Editar</a>
@@ -76,4 +77,4 @@ function renderTodo(data) {
 }
 
 
-getTask();
+getTask3();
